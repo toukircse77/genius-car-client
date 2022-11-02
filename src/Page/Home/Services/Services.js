@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import servicesCard from './servicesCard';
+import ServicesCard from './ServicesCard';
 
 
 const Services = () => {
@@ -11,17 +11,17 @@ const Services = () => {
     },[])
     return (
         <div>
-            <div className='text-center'>
+            <div className='text-center mb-5'>
                 <p className="text-2xl font-bold text-orange-600">Service</p>
                 <h2 className="text-5xl my-4 font-semibold">Our Service Area</h2>
                 <p className='mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore iure assumenda rem! Officia, voluptatum assumenda!</p>
             </div>
-            <div>
+            <div className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
-                    services.map(service => <servicesCard
+                    services.map(service => <ServicesCard
                     key={service._id}
                     service = {service}
-                    ></servicesCard>)
+                    ></ServicesCard>)
                 }
             </div>
         </div>
